@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./src/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <span class="kobay">1</span>
+        <span class="kobay">2</span>
+        <span class="kobay">3</span>
+    </div>
+    <div>
+        <p>
+            <span class="kobay">yeni</span>
+            <b>Kalın yazı</b>
+        </p>
+        <p>
+            <span>deneme</span>
+        </p>
+        <span class="kobay">4</span>
+        <span class="kobay">5</span>
+        <span class="kobay">6</span>
+        <li class="kobay">x</li>
+        <li class="kobay">y</li>
+        <li class="kobay">z</li>
+        <i>eğik yazı</i>
+    </div>
+    <script>
+        $(document).ready(function () {
+            {
+                $("div span:first-of-type").css("text-decoration", "underline");
+                $("div > span:first-child").css("color", "red");
+                $("div > span:first-of-type").css("border", "solid green 1px");
+            }
+            //first-of-type : ebeveynin içerisinde bulunan etiketlerden bu türdeki ilki
+            $("div > .kobay:first-of-type").css("background-color", "gray");
+            console.log($("div > .kobay:last-of-type").text())
+            console.log($("div > *:last-child").text());
+            //only-child : ebeveyninin tek çocuğu olanları filtreler.
+            $("div span:only-child").css("background-color", "aqua");
+            $("div > *:only-of-type").css("background-color","yellow");
+
+        });
+    </script>
+</body>
+
+</html>

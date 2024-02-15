@@ -1,0 +1,23 @@
+*{
+    height: 100vh;
+}
+
+.abc{
+    background-color: rgb(254, 64, 64);
+    height: 25vh;
+}
+
+.yatay{
+    width: 50%;
+    height: 60vh;
+    float: left;
+}
+
+#sol{
+    background-color: rgb(29, 249, 0);
+}
+
+#sag{
+    background-color:black;
+}
+

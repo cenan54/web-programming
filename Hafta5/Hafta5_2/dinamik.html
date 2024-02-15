@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{color: green; margin: 5px; border: solid 1px black;}
+    </style>
+</head>
+<body>
+    <input type="text" id="girdi">
+    <button onclick="Ekleme()"> Ekle </button>
+    <br>
+    <ul id="liste"></ul>
+
+
+    <button id="btnOrnek">Örnek</button>
+    <button id="btnOrnek2">Örnek 2</button>
+    <button id="btnOrnek3">Örnek 3</button>
+    <script>
+        // var eleman = document.createElement("p");
+        // eleman.innerText="Merhaba";
+        // eleman.style.color="red";
+        // document.body.appendChild(eleman);
+
+        function Ekleme(){
+            //burada girdi elemanı çağırılıp maddeye atanıyor
+            var madde = document.getElementById("girdi");
+            //liste adındaki ul çağırılıp listeye atanıyor
+            var liste = document.getElementById("liste")
+            //burada liste elemanına liste oluşturuyoruz
+            var listeElemani=document.createElement("li");
+            //listeelamanına maddenin değeri atanıyor
+            listeElemani.innerText=madde.value;
+            //ul list kısmının içine liste atanıyor
+            liste.appendChild(listeElemani);
+        }
+
+        var btn =document.getElementById("btnOrnek");
+        btn.addEventListener("click",Ekleme);
+
+        var btn2 = document.getElementById("btnOrnek2");
+        btn2.addEventListener("click",Yaz);
+
+         function Yaz(){
+            console.log("Tek Sefer Yazildi!");
+            btn2.removeEventListener("click", Yaz);
+         }
+
+        var btn3 = document.getElementById("btnOrnek3");
+        btn3.addEventListener("ornek 3 event 1");
+
+        btn3.addEventListener("click");
+
+
+
+        //btn2.removeEventListener("click", Yaz);
+      
+
+    </script>
+</body>
+</html>

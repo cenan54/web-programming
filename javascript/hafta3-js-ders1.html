@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        var sayi = 10;
+        //alert(sayi);
+        sayi = "merhaba";
+        //alert(sayi);
+        console.log("console örneği");
+
+        for(var sayi=1;  sayi<=10;  sayi++)
+        {
+            console.log(sayi);
+        }
+
+        var metin="";
+        for(var sayi2=1; sayi2<=10; sayi2++)
+        {       
+            metin = metin+sayi2;
+            if(sayi2<10)
+            {
+                metin+="-";
+            }
+        }
+        console.log(metin);
+
+        var tutulanSayi = 36;
+        while(tutulanSayi >=3)
+        {
+            tutulanSayi-=3;
+        }
+        console.log("kalan ="+tutulanSayi);
+
+        function yazdir(metin)
+        {
+            console.log(metin);
+        }
+
+        yazdir("merhaba");
+
+
+        function BuyukYaz(s1,s2)
+        {
+            if(s1>s2)
+            {
+                console.log(s1);
+            }
+            else
+            {
+                console.log(s2);
+            }
+        }
+        BuyukYaz(33,45);
+        BuyukYaz(12,"metin");
+
+    </script>
+    
+</body>
+</html>

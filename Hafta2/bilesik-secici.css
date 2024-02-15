@@ -1,0 +1,23 @@
+p{
+    text-decoration: underline;
+    font-style: italic;
+}
+.ust p{
+    color:rgb(0, 255, 47);
+}
+.ust >p{
+    border: solid 3px rgb(255, 174, 0);
+}
+
+div.ust >p{
+    font-style: italic;
+}
+
+div.ust[kobay]>p{
+    font-weight: bold;
+    font-style: normal !important;
+}
+
+div  p {
+    color: rgb(255, 0, 208);
+   }

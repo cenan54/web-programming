@@ -1,0 +1,22 @@
+[cenan]{
+    color: green;
+}
+
+[cenan=test]{
+    font-size: 30px;
+}
+
+[cenan^=t]{
+    text-decoration: underline;
+
+}
+[cenan*=test]{
+    background-color: orange;
+}
+
+[cenan~=test]{
+    font-family: Verdana;
+}
+[cenan$=on]{
+    border: solid 3px magenta;
+}

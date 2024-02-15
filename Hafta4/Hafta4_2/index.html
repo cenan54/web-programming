@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pc class="kobay1">
+        paragraf1
+    </p>
+    <p class="kobay1">
+        paragraf2
+    </p>
+    <br>
+    <div>
+        div1
+    </div>
+    <br>
+    <span id="span1">
+        span1
+    </span>
+    <script>
+        //document şuanda üzerinde çalışılan html dosyasını ifade eder
+
+        //window ise html sayfasının açık olduğu web tarayıcı uygulama 
+        //penceresini ifade eder
+        
+        //getElementsByTagName() kendisine parametre olarak gönderilen
+        //dizi değeri döndürür
+        
+        //etiket adına sahip tüm html elemanlarını veririr
+
+        //getElementById() "" "id" öz niteliğine sahip html öğesini getirir
+
+        //getElementsByClassName() class html öğesini getirir
+
+
+        //etiketlere(taglara) göre çağırma
+        var paragraflar = document.getElementsByTagName("p");
+        console.log(paragraflar);
+        var eleman = paragraflar[1];
+        eleman.style.color="red";
+
+        var divler=document.getElementsByTagName("div");
+        console.log(divler.length);
+
+        //id göre çağırma
+        var span1=document.getElementById("span1");
+        console.log("span1");
+        span1.style.backgroundColor="red";
+
+
+        var kobaylar=document.getElementsByClassName("kobay1");
+        console.log("kobaylar");
+
+        kobaylar[1].innerText="Merhaba";
+
+    </script>
+</body>
+</html>

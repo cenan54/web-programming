@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./../../src/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <div style="border: solid 2px rgb(0, 255, 38); padding: 5px;">
+        <span class="kobay">1</span>
+        <span class="kobay">2</span>
+        <span class="kobay">3</span>
+    </div>
+
+<br>
+
+    <div style="border: solid 2px rgb(0, 255, 30); padding: 5px;">
+        <p>
+            <span class="kobay">yeni</span>
+            <b>Kalın yazı</b>
+        </p>
+        <span class="kobay">4</span>
+        <span class="kobay">5</span>
+        <span class="kobay">6</span>
+        <p><span>deneme</span></p>
+
+
+        <li class="kobay">x</li>
+        <li class="kobay">y</li>
+        <li class="kobay">z</li>
+        <i>Eğik yazi</i>
+
+    </div>
+    <script>
+$(document).ready(function () {
+    $("div span:first-of-type").css("text-decoration","underline");
+    $("div > span:first-child").css("color","red");
+    $("div > span:first-of-type").css("font-style","italic");
+    //first-of-type: ebeyninin içerisinde bulunan etiketlerden ilk o türden olanı seçer
+//ilk olarak başka gelse bile 
+    $("div > .kobay:first-of-type").css("background-color","gray");
+    console.log($("div > .kobay:last-of-type").text());
+    console.log($("div > *:last-child").text());
+//only-child ebeveynin tek çocuğu olanları filtreler
+    $("div span:only-child").css("background-color","aqua");
+//türünün tek örneği olanlara uygular
+    $("div *:only-of-type").css("background-color","yellow");
+    $("div > *:only-of-type").css("color","rgb(43, 0, 255)");
+
+});
+
+
+   </script>
+</body>
+</html>

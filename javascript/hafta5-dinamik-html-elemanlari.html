@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            color: green;
+            margin: 5px;
+            border: solid 1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="txtMetin">
+    <button onclick="ListeyeEkle()">Ekle</button>
+    <br>
+    <ul id="liste">
+    </ul>
+
+    <button id="btnOrnek">Örnek</button>
+    <button id="btnOrnek2"> Örnek 2</button>
+    <button id="btnOrnek3">örnek 3</button>
+    <script>
+        // var eleman=document.createElement("p");
+        // eleman.innerText="Merhaba";
+        // eleman.style.color="red";
+        // document.body.appendChild(eleman);
+        function ListeyeEkle() {
+            var eleman = document.getElementById("txtMetin");
+            var liste = document.getElementById("liste");
+            var listeElemani = document.createElement("li");
+            listeElemani.innerText = eleman.value;
+            liste.appendChild(listeElemani);
+        }
+        var btn = document.getElementById("btnOrnek");
+        btn.addEventListener("click", ListeyeEkle);
+
+        var btn2 = document.getElementById("btnOrnek2");
+        btn2.addEventListener("click", Yaz);
+        function Yaz() {
+            console.log("Tek sefer klik");
+            btn2.removeEventListener("click", Yaz);
+        }
+        var btn3 = document.getElementById("btnOrnek3");
+        btn3.addEventListener("click", function () {
+            console.log("örnek 3 event 1");
+        })
+        
+        btn3.addEventListener("click", function () {
+            console.log("örnek 3 event 2");
+        })
+
+        btn3.replaceWith(btn3.cloneNode(true));
+
+        //.removeEventListener("click",Yaz);
+
+    </script>
+</body>
+
+</html>

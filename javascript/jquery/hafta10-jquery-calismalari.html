@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="src/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <div></div>
+        <div id="kobay"></div>
+        <div>Hedef</div>
+        <div></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#kobay+div").css("color", "red");
+            $("div div:last-of-type").css("text-decoration", "underline");
+            $("#kobay").next().css("font-size", "35px")
+        });
+    </script>
+
+    <p id="bir_paragraf">Birinci paragraf</p>
+    <p id="iki_paragraf">İkinci paragraf</p>
+    <div>
+        <p id="uc_paragraf">Üçüncü paragraf</p>
+        <ul>
+            <li id="bir_li">Elma</li>
+            <li id="iki_li">Üzüm</li>
+            <li id="uc_li">Mandalina</li>
+            <li id="dort_li">Karpuz</li>
+        </ul>
+    </div>
+    <p id="dort_paragraf">Dördüncü paragraf</p>
+    <span>Birinci span</span>
+    <br />
+    <button>Çiftleri boya</button>
+
+
+    <script>
+        $(document).ready(function () {
+            $("button").on("click", function () {
+                $(" ul li:odd").css("background-color", "green");
+                
+            })
+        });
+    </script>
+
+<table border=1 style="width: 100px">
+    <tr>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>6</td>
+    </tr>
+</table>
+<script>
+    $(document).ready(function(){
+        $("tr:even").css("background-color","gray");//filter kullanarak
+        $("td").css("text-align","center");
+        $("tr").even().css("color","red");//css seçici kullanarak
+        //tr kısmına kadar olan yer collection olarak tutulur
+        //collection üzerinde yapılacak işlemler
+        $("tr").eq(3).css("font-size","30px");
+    });
+</script>
+<br>
+<ul id="ulkobay">
+    <li kobay>list item1</li>
+    <li id="kobay">list item2</li>
+    <li>list item3</li>
+    <li kobay>list item4</li>
+    <li class="kobay">list item5</li>
+    <li class="kobay">list item6</li>
+</ul>
+
+    <script>
+        //seçilen collection içinden filter işlemi uygular
+        $("#ulkobay > li").filter(".kobay").css("color","aqua");
+        $("#ulkobay > li").filter("[kobay]").css("text-decoration","underline");
+        $("#ulkobay > li").filter(function(index){
+            return index==2 || index==5
+        }).css("background-color","yellow");
+    </script>
+
+</body>
+
+</html>

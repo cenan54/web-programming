@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>15</p>
+    <p>20</p>
+    <button id="btnToplam" onclick="Topla()">0</button>
+    <button  onclick="Topla()">Topla</button>
+    <script>
+        function Topla() {
+            var btn = document.getElementById("btnToplam");
+            var pler = document.getElementsByTagName("p");
+            btn.innerText = Number(pler[0].innerText) + Number(pler[1].innerText);
+        }
+    </script>
+</body>
+
+</html>

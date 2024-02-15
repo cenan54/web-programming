@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="./../../lib/bootstrap/css/bootstrap.min.css">
+
+    <style>
+        .kirmizi {
+            background-color: red;
+        }
+
+        .mavi {
+            background-color: blue;
+        }
+
+        .yesil {
+            background-color: green;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12 col-md-4 kirmizi">
+            Kısım 1
+            <div class="alert alert-primary d-none" role="alert">
+                A simple primary alert—check it out!
+              </div>
+              <div class="alert alert-secondary d-none" role="alert">
+                A simple secondary alert—check it out!
+              </div>
+        </div>
+        <div class="col-8 mavi">
+
+            <div class="row">
+                <div class="col-12 col-md-8 mavi">Kısım 2 üst
+                    
+                    
+                    <button class="btn btn-primary">button 1</button>
+                    <button class="btn btn-secondary">button 2</button>
+                    <button class="btn btn-success">button 3</button> 
+                    <button class="btn btn-danger">Universite</button> 
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 yesil">Kısım 2 alt
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card my-3">
+                                <div class="card-header">
+                                    <h3>Örnek card kullanımı</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                    <p> when an unknown printer took a galley of type and scrambled it to make a type
+                                        specimen book. It has survived not only five centuries, but also the leap into
+                                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                        and more recently with desktop publishing software like Aldus PageMaker
+                                        including versions of Lorem Ipsum.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card my-3">
+                                <div class="card-header">
+                                    <h3>Örnek card kullanımı</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                    <p> when an unknown printer took a galley of type and scrambled it to make a type
+                                        specimen book. It has survived not only five centuries, but also the leap into
+                                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                        and more recently with desktop publishing software like Aldus PageMaker
+                                        including versions of Lorem Ipsum.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card my-3">
+                                <div class="card-header">
+                                    <h3>Örnek card kullanımı</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                    <p> when an unknown printer took a galley of type and scrambled it to make a type
+                                        specimen book. It has survived not only five centuries, but also the leap into
+                                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                        and more recently with desktop publishing software like Aldus PageMaker
+                                        including versions of Lorem Ipsum.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card my-3">
+                                <div class="card-header">
+                                    <h3>Örnek card kullanımı</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                    <p> when an unknown printer took a galley of type and scrambled it to make a type
+                                        specimen book. It has survived not only five centuries, but also the leap into
+                                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                        and more recently with desktop publishing software like Aldus PageMaker
+                                        including versions of Lorem Ipsum.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/bootstrap/lib/jquery/jquery-3.7.1.min.js"></script>
+    <script src="/bootstrap/lib/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btn").addClass("m-2 p-3")
+            $(btn-primary).on("click",function(){
+                $(alert-primary).toggleClass("d-none");
+                $(btn-secondary).on("click",function(){
+                    $(alert-secondary).toggleClass("d-none")
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+        

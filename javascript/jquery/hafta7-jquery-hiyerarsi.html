@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./src/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input name="name" id="name">
+        <fieldset>
+            <label for="newsletter">Newsletter:</label>
+            <input name="newsletter" id="newsletter">
+        </fieldset>
+    </form>
+    <label>Deneme : </label>
+    <input name="none">
+
+    <ul>
+        <li>1</li>
+        <li class="kobay">2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="kobay">5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+
+    <div>
+        div (doesn't match since before #prev)
+    </div>
+    <span id="prev">
+        span#prev
+    </span>
+    <div>
+        div sibling
+    </div>
+    <div class="xyz">
+        div sibling
+        <div id="small">
+            div niece
+        </div>
+    </div>
+    <span>
+        span sibling (not div)
+    </span>
+    <div class="xyz">
+        div sibling
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("label + input").css("color", "blue").val("hedef");
+            $(".kobay + li").css("color", "red");
+
+            $("#prev ~ div").css("text-decoration", "underline");
+            $("#prev ~ span").css("color", "red");
+            $("#prev ~ .xyz" ).css("border","solid 1px green");
+
+        })
+    </script>
+</body>
+
+</html>

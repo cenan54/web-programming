@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="spn1"> paragraf 1 </p>
+    <p class="kobay"> paragraf 2 </p>
+    <br>
+    <div class="kobay"> div 1 </div>
+    <div> div 2 </div>
+    <div> div 3 </div>
+    <br>
+    <span id="spn1"> span 1 </span>
+
+    <script>
+        //document: üzerinde çalışılan html dosyasını ifade eder.
+        //window: html sayfasının açık olduğu web tarayıcı uygulama penceresini ifade eder.
+
+        //getElementsByTagName() : Kendisine parametre olarak gönderilen etiket adına sahip tüm html elemanlarını verir.
+        //getElementById(): Kendisine parametre olarak verilen "Id" öz niteliğine sahip html öğesini getirir.
+        //getElementsByClassName(): Kendisine parametre olarak verilen class öz niteliğine sahip html elemanlarını verir.
+
+
+        var paragraflar = document.getElementsByTagName("p");
+        console.log(paragraflar);
+        var eleman = paragraflar[1];
+        eleman.style.color = "red";
+
+        var divler = document.getElementsByTagName("div");
+        console.log(divler.length);
+
+        var s = document.getElementById("spn1");
+        console.log(s);
+
+        var kobaylar = document.getElementsByClassName("kobay");
+        console.log(kobaylar);
+
+        kobaylar[1].innerText = "Merhaba";
+    </script>
+</body>
+
+</html>

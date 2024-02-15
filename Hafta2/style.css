@@ -1,0 +1,40 @@
+*{
+    font-family: "Tahoma";
+}
+
+#kolay1{
+    color: red;
+    font-size: 30px;
+    background-color: orange;
+    width: 30%;
+}
+
+.kirmizi{
+    color: red;
+}
+
+.kutu{
+    border: solid 3px brown;
+}
+
+.egik{
+    font-style: italic;
+}
+
+[uyduruk]{
+    font-weight: bold;
+}
+
+[girin]{
+    font-weight: bold;
+}
+
+.sinif1{
+    color: green !important;
+    text-decoration: underline;
+}
+
+.sinif2{
+    color: yellow;
+    font-weight: bold;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./../src/jquery-3.7.1.min.js"></script>
+    <style>
+        .kirmizi {
+            color: red;
+        }
+
+        .mavi {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="spnCounter">0</span>
+    <button id="btnStart">Başlat</button>
+    <button id="btnStop">Durdur</button>
+    <button id="btnReset">Sıfırla</button>
+
+    <script>
+        var counter = 0;
+        var myIntervalid;
+        var IsStart = false;
+        $(document).ready(function () {
+            $("#btnStart").on("click", function () {
+                if (!IsStart) {
+                    myIntervalid = setInterval(function () {
+                        counter++;
+                        $("#spnCounter").text(counter);
+                        if (counter >= 5) {
+                            if (counter % 2 == 0) {
+
+                                $("spnCounter").toggleClass("kirmizi")
+                            } else {
+                                $("spnCounter").toggleClass("mavi")
+                            }
+
+                        }
+                    }, 1000);
+
+                    IsStart = true;
+                }
+            });
+
+            $("#btnStop").on("click", function () {
+                clearInterval(myIntervalid);
+                IsStart = false;
+            });
+            $("#btnReset").on("click", function () {
+                clearInterval(myIntervalid);
+                counter = 0;
+                $("#spnCounter").text(counter);
+                IsStart = false;
+            });
+        });
+    </script>
+</body>
+
+</html>

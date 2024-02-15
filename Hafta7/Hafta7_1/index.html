@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <form>
+    <label for="name">Name:</label>
+    <input name="name" id="name">
+    <fieldset>
+        <label for="newsletter">Newsletter:</label>
+        <input name="newsletter" id="newsletter">
+    </fieldset>
+    </form>
+    <label>Deneme_1</label>
+    <input name="none">
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li class="kobay">3</li>
+        <li>4</li>
+        <li>5</li>
+        <li class="kobay">6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+
+    <script>
+        $(document).ready(function(){
+        
+        $("label + input").css("color","blue").val("hedef");
+        $(".kobay + li").css("color", "red");
+        
+        $("prev ~ div")
+
+
+        });
+    </script>
+</body>
+</html>

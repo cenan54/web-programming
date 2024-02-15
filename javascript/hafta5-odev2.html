@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #txtSayi {
+            width: 100px;
+            border: 1px solid brown;
+        }
+
+        #btnTahmin {
+            width: 75px;
+            background-color: aquamarine;
+            color: orangered;
+        }
+
+        #divPanel {
+            margin-top: 5px;
+            width: 175px;
+            height: 75px;
+            overflow-y: scroll;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="txtSayi">
+    <button id="btnTahmin" onclick="TahminClick()">Tahmin Et</button>
+    <br />
+    <div id="divPanel">
+    </div>
+    <script>
+        var tutulanSayi = Math.floor(Math.random() * (150 - 75 + 1)) + 75;
+        var adet = 0;
+        console.log(tutulanSayi);
+        function TahminClick() {
+            var panel = document.getElementById("divPanel");
+            var eleman = document.getElementById("txtSayi");
+            var tahminEdilenSayi = Number(eleman.value);
+            adet++;
+            eleman.value="";
+            if (tutulanSayi == tahminEdilenSayi) {
+                panel.innerHTML = panel.innerHTML + "<br/> Tebrikler bildiniz. " + adet + " tahnin yaptınız.";
+            } else if (tutulanSayi < tahminEdilenSayi) {
+                panel.innerHTML = panel.innerHTML + "<br/> Aşağı.";
+            } else {
+                panel.innerHTML = panel.innerHTML + "<br/> Yukarı.";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

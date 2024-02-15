@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .enBuyukSayi {
+            height: 100px !important;
+            width: 100px !important;   
+
+        }
+        #divContainer>div {
+            height: 70px;
+            width: 70px;
+            border: solid black 1px;
+            background-color: salmon;
+            margin: 5px;
+            float: left;
+            cursor: pointer;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        #divContainer {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="divContainer"></div>
+    <div>
+        <button id="btnGoster" onclick="EnBuyukGoster()">En büyük göster</button>
+    </div>
+    <script>
+        var random = Math.floor(Math.random() * 5 + 1);
+        console.log(random);
+        var container = document.getElementById("divContainer");
+        for (var i = 0; i < random; i++) {
+            var divYeni = document.createElement("div");
+            divYeni.innerText = "0";
+            divYeni.setAttribute("class", "kobay")
+            divYeni.addEventListener("click", DivClick);
+            container.appendChild(divYeni);
+        }
+        function DivClick(event) {
+            var eleman = event.target;
+            var mevcutSayi = Number(eleman.innerText);
+            mevcutSayi++;
+            eleman.innerText = mevcutSayi
+        }
+
+        function EnBuyukGoster() {
+            var kobaylar = document.getElementsByClassName("kobay");
+            var enBuyuk = 0;
+            var enBuyukIndis = 0;
+            for (var i = 0; i < kobaylar.length; i++) {
+                var siradakiDiv = kobaylar[i];
+                var siradakiSayi = Number(siradakiDiv.innerText);
+                if (siradakiSayi > enBuyuk) {
+                    enBuyuk = siradakiSayi;
+                    enBuyukIndis = i;
+                }
+                else{
+                    siradakiDiv.removeAttribute("class");
+                }
+                siradakiDiv.setAttribute("class","kobay");
+            }
+            var enBuyukSayiliDiv = kobaylar[enBuyukIndis];
+            enBuyukSayiliDiv.setAttribute("class", "kobay enBuyukSayi");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

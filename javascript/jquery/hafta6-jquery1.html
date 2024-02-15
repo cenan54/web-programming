@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="kobay">
+        deneme
+    </div>
+    <div>
+
+    </div>
+
+    <p class="kobay">asdas</p>
+    <span class="kobay">jhsgdlfsdfkm </span>
+
+    <script src="./src/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //$("#kobay").text("Merhaba");
+
+            //$("div").text("jaghsdkajsfdalkfjl aksjfhlıaj")
+
+            $(".kobay").text("classlar aynı");
+            
+            var elemanlar= document.getElementsByClassName("kobay");
+
+            for (let index = 0; index < elemanlar.length; index++) {
+                elemanlar[index].innerText="classlar aynı";                
+            }
+        })
+    </script>
+</body>
+
+</html>

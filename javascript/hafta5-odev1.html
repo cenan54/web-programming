@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="kobay" style="width: 100px; height: 50px; border: 2px solid black;" onmouseover="FareUstunde()" onmouseout="FareUstundeDegil()">
+        Hafta 5
+    </div>
+
+    <script>
+        var eskiMetin = "";
+        var yeniMetin = "Merhaba";
+        function FareUstunde() {
+            var eleman = document.getElementById("kobay");
+            eskiMetin=eleman.innerText;
+            eleman.innerText = yeniMetin;
+        }
+
+        function FareUstundeDegil(){
+            var eleman = document.getElementById("kobay");
+            eleman.innerText = eskiMetin;
+        }
+    </script>
+
+</body>
+
+</html>

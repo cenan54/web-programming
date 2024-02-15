@@ -1,0 +1,13 @@
+.kutu{
+    height:100vh;
+    width: 50%;
+    float:left;
+}
+
+#div_turuncu{
+    background-color:#fa980f;
+}
+
+#div_mavi{
+    background-color:#2066ff;
+}

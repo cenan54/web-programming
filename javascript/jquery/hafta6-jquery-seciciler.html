@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [myattribute*=z]{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kobay">
+        metin 1
+    </div>
+    <div myattribute>
+        metin 2
+    </div>
+    <p myattribute>paragraf 1</p>
+    <span myattribute="xyz-abc">span 1</span>
+    <span  myattribute="xyzabc">span 2</span>
+    <span  myattribute="xyz">span 3</span>
+    <script src="./src/jquery-3.7.1.min.js"></script>
+    <script>
+        //$(".....")
+        $(document).ready(function () {
+            var x = ".kobay";
+            //basic selector
+            $(x).text("abc");//$(".kobay").text("abc");
+
+            //attribute selector
+            $("[myattribute]").css("color","red");
+            $("[myattribute|=xyz]").css("border","solid 1px black");
+        })
+
+    </script>
+</body>
+
+</html>

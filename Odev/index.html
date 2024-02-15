@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Divlerin Sayısı</title>
+	
+</head>
+ <!--//body oluşturulduğunda çalıştırılacak fonksiyon var-->
+<body onload="DivOlustur()">
+   
+
+
+    <script>
+		function DivOlustur() {
+            //bu değişken random kullanarak 1 ile 10 arsında sayı tutacak
+            //+1 kısmı ise 0 olmaması için
+			var tutulanSayi = Math.floor(Math.random() * 10) + 1;
+            console.log()
+
+
+            //burada for döngüsü ile tutulan sayı kadar div oluşturuluyor
+            //ve divin nasıl gözükmesi gerekeceği style lar bulunuyor
+			for (var i = 1; i <= tutulanSayi; i++) {
+				var div = document.createElement("div");
+				div.style.width = "30px";
+				div.style.height = "30px";
+				div.style.backgroundColor = "blueviolet";
+				div.style.margin = "5px";
+                div.style.float = "left";
+                div.style.cursor = "pointer";
+                div.innerHTML = 0;
+                div.onclick = function() {
+                    this.innerHTML++;
+                }
+                div.setAttribute('id', i);
+                div.setAttribute('class', "kobaylar");
+                document.body.appendChild(div);
+               
+                
+			}
+            //burada büyük olanı bul tuşu ve onun özellikleri belirlenmiştir
+                var tus = document.createElement("button");
+                tus.style.width = "150px";
+                tus.style.height = "30px";
+                tus.style.backgroundColor = "red";
+                tus.innerHTML = "Büyük olanı bul";
+                tus.style.float = "right";
+                tus.onclick = 
+
+            
+                function EnBuyukGoster()
+                {
+                    var kobaylar=document.getElementsByClassName("kobaylar");
+                    var enBuyuk=0;
+                    var enBuyukIndis=0;
+                    for (var i = 0; i<kobaylar.length; i++) {
+                        var siradakiDiv = kobaylar[i];
+                        var siradakiSayi = Number(siradakiDiv.innerText);
+                        if(siradakiSayi>enBuyuk)
+                        {
+                            enBuyuk=siradakiSayi;
+                            enBuyukIndis=i;
+                        }
+                        else{
+                            siradakiDiv.removeAttribute("class");
+                        }
+                        siradakiDiv.setAttribute("class","kobay");
+                    }
+
+                }
+                    
+
+                
+                }
+                document.body.appendChild(tus);
+
+
+            }
+
+
+          
+            </script>
+</body>
+</html>

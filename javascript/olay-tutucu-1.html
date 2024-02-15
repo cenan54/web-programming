@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="olaytutucu()">Tıkla!</button>
+    <br>
+    <p onclick="olaytutucu()">paragraf 1</p>
+    <br>
+    <span onclick="olaytutucu();olaytutucu2();">Span 1</span>
+    <br>
+    <button id="btnSayac" onclick="arttir()">0</button>
+    <script>
+        function olaytutucu() {
+            console.log("Tıklandı");
+        }
+        function olaytutucu2() {
+            console.log("olay tutucu 2");
+        }
+        function arttir() {
+            var btn = document.getElementById("btnSayac");
+            var mevcutSayi= Number(btn.innerText);
+            mevcutSayi++;
+            btn.innerText=mevcutSayi;
+        }
+
+    </script>
+</body>
+
+</html>

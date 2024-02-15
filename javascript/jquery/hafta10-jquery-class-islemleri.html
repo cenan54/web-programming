@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="src/jquery-3.7.1.min.js"></script>
+    <style>
+        .kirmizi{
+            color: red;
+        }
+        .mavi{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="kobay">
+        Kobay divi
+    </div>
+    <br>
+    <button id="btnAdd">Ekle</button>
+    <button id="btnRemove">Çıkar</button>
+    <button id="btnToggle">Değiştir</button>
+    <script>
+        $(document).ready(function(){
+
+            $("#btnAdd").on("click",function(){
+                $("#kobay").addClass("kirmizi");
+            })
+
+            $("#btnRemove").on("click",function(){
+                $("#kobay").removeClass();
+            })
+            
+            $("#btnToggle").on("click",function(){
+                $("#kobay").toggleClass("mavi");
+            })
+
+        });
+    </script>
+</body>
+</html>

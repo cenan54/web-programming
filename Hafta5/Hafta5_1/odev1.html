@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div onmouseout="faredisarida()" onmouseover="fareustunde()" id="kobay" style="width:100px; height:50px;border:2px solid black">Hafta5</div>
+
+
+<script>
+
+var eskimetin="";
+var yenimetin="Merhaba";
+
+
+
+
+function fareustunde(){
+    var eleman = document.getElementById("kobay");
+    eskimetin=eleman.innerText;
+    eleman.innerText=yenimetin;
+}
+
+function faredisarida(){
+    var eleman = document.getElementById("kobay");
+    eleman.innerText=eskimetin;
+}
+
+</script>
+
+</body>
+</html>

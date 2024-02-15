@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #txtSayi{
+            width: 100px;
+            border: 1px solid brown;
+        }
+        #btnTahmin{
+            background-color: aquamarine;
+            width: 85px;
+            color: orangered;
+            overflow-y: scroll;
+            height: 40px;
+        }
+        #divPanel{
+            width: 175px;
+            height: 75px;
+            overflow-y: scroll;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" id="txtSayi">
+    <button id="btnTahmin" onclick="TahminClick()">Tahmin et!</button>
+    <br />
+    <div id="divPanel">
+
+        <div id="hataLog">
+
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+
+        var hataCounter = 0;
+        var tutulanSayi=Math.floor(Math.random()*(150-75+1))+75;
+        console.log(tutulanSayi);
+
+        function TahminClick(){
+            var panel=document.getElementById("divPanel");
+            var eleman=document.getElementById("txtSayi");
+            var tahminEdilenSayi=Number(eleman.value);
+
+            if(tutulanSayi==tahminEdilenSayi){
+                panel.innerHTML=panel.innerHTML+"<br/> Tebrikler bildiniz!";
+                console.log("Hatalı tahmin sayısı: " + hataCounter);
+            } else if(tutulanSayi>tahminEdilenSayi){
+                panel.innerHTML=panel.innerHTML+"<br/> Yukarı!";
+                hataCounter++;
+            } else{
+                panel.innerHTML=panel.innerHTML+"<br/> Aşağı!";
+                hataCounter++;
+            }
+
+        }
+
+
+
+        // do {
+        //     sayi= Math.random()*150;
+        // }
+        // while(!(sayi>75&&sayi<150)){
+        //     console.log(sayi);
+        // }
+
+
+    </script>
+
+</body>
+</html>

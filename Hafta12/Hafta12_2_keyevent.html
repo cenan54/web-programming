@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./../lib/jquery/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="txtKobay" />
+    </div>
+    <script>
+        $(document).ready(function () {
+            var txt = $("#txtKobay");
+
+            txt.on("keydown", function () {
+                //console.log("keydown triggered.");
+            });
+
+            txt.on("keyup", function () {
+                //console.log("keyup triggered.");
+
+            });
+
+            txt.on("keypress", function (event) {
+                //console.log("keypress triggered.");
+                //log(event, "Gerçekleşen olay : ");
+                //log(event.target,"Hedef obje :");
+                log(event.charCode);
+                if (event.charCode >= 48 && event.charCode <= 57) {
+                    event.preventDefault();
+                }
+            });
+
+
+
+
+
+        });
+
+
+        function log(data, prefix) {
+            if (prefix)
+                console.log(prefix);
+            console.log(data);
+        }
+    </script>
+</body>
+
+</html>
